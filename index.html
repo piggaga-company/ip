@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Device Info Tracker with Firebase</title>
+<link rel="stylesheet" href="styles.css">
+<script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-firestore.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<div id="content">
+    <h1>Device Info Tracker with Firebase</h1>
+    <div id="ip-info">
+        <h2>Your IP Address:</h2>
+        <p id="ip-address">Loading...</p>
+        <h2>Your Location:</h2>
+        <p id="location">Loading...</p>
+        <h2>Your Device Type:</h2>
+        <p id="device-type">Loading...</p>
+        <h2>Additional Device Info:</h2>
+        <p id="additional-info">Loading...</p>
+        <button id="clear-button">Clear Records</button>
+    </div>
+    <h2>Visited IPs:</h2>
+    <input type="text" id="search-ip" placeholder="Search IP">
+    <button id="sort-by-visits">Sort by Visits</button>
+    <button id="sort-by-recent">Sort by Recent</button>
+    <ul id="visited-ips-list"></ul>
+    <div id="ip-details">
+        <h2>IP Details:</h2>
+        <p id="detail-ip"></p>
+        <p id="detail-visits"></p>
+        <ul id="detail-timestamps"></ul>
+        <canvas id="visit-chart"></canvas>
+    </div>
+    <button id="export-button">Export Data</button>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
